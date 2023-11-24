@@ -2,6 +2,7 @@ package pe.edu.cibertec.Tema2Sesion1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.w3c.dom.ranges.Range;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -264,5 +265,41 @@ class Tema2Sesion1ApplicationTest {
 		String[] nombres2 = { "java", "junit", "jboss" };
 
 		assertArrayEquals(nombres1, nombres2);
+	}
+
+	@Test
+	public void productNamesAssertNotSame(){
+		// 1. Los nombres que se ingresan en dos productos no deben ser iguales
+		String name1 = "Ariel";
+		String name2 = "Ace";
+		assertNotSame(name1, name2);
+	}
+
+	@Test
+	public void productPriceLET1000MET250AssetTrue(){
+		// 2. Los precios ingresados no deben ser mayores a 1000  ni menores de 250
+		int price = 750;
+		assertTrue( (250 <= price) && (price <= 1000) );
+	}
+
+	@Test
+	public void monthBetween1and12AssertTrue(){
+		// 3. El dato ingresado en el campo mes solo puede ser un valor entre 1 y 12
+		int month = 12;
+		assertTrue( (1 <= month) && (month <= 12));
+	}
+
+	@Test
+	public void salaryMoreThanZeroAssertTrue(){
+		// 4. El sueldo asignado a un trabajador siempre tiene que ser mayor que cero aunque sea en decimales
+		double salary = 0.1;
+		assertTrue(0 < salary);
+	}
+
+	@Test
+	public void notAllowDiscountAssertTrue(){
+		// 5. No se debe permitir el descuento cuando el monto es igual o menor que cero
+		int price = 0;
+		assertTrue(0 >= price);
 	}
 }
