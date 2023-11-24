@@ -17,7 +17,10 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertEquals1() {
-		assertEquals(1, 2);
+		// assertEquals(1, 2);
+
+		/* -> Right data <- */
+		assertEquals(1, 1);
 	}
 
 	@Test
@@ -27,7 +30,10 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertEquals3() {
-		assertEquals("2", 2);
+		// assertEquals("2", 2);
+
+		/* -> Right data <- */
+		assertEquals("2", "2");
 	}
 
 	@Test
@@ -62,7 +68,10 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertEquals9() {
-		assertEquals('2', 2);
+		// assertEquals('2', 2);
+
+		/* -> Right data <- */
+		assertEquals('2', '2');
 	}
 
 	@Test
@@ -81,7 +90,10 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertTrue2() {
-        assertEquals(1, 2);
+        // assertEquals(1, 2);
+
+		/* -> Right data <- */
+		assertEquals(1, 1);
 	}
 
 	@Test
@@ -101,7 +113,10 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertFalse1() {
-        assertNotEquals(1, 1);
+        // assertNotEquals(1, 1);
+
+		/* -> Right data <- */
+		assertNotEquals(1, 5);
 	}
 
 	@Test
@@ -111,7 +126,10 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertFalse3() {
-		assertFalse(1 != 2);
+		// assertFalse(1 != 2);
+
+		/* -> Right data <- */
+		assertFalse(1 != 1);
 	}
 
 	@Test
@@ -132,13 +150,21 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertNull2() {
-		String nombre="a";
+		// String nombre="a";
+
+		/* -> Right data <- */
+		String nombre = null;
+
 		assertNull(nombre);
 	}
 
 	@Test
 	void ejemploAssertNotNull1() {
-		String nombre=null;
+		// String nombre=null;
+
+		/* -> Right data <- */
+		String nombre="nombre";
+
 		assertNotNull(nombre);
 	}
 
@@ -155,7 +181,10 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertSame2() {
-		assertSame("Hola","HolA");
+		// assertSame("Hola","HolA");
+
+		/* -> Right data <- */
+		assertSame("Hola","Hola");
 	}
 
 	@Test
@@ -167,12 +196,18 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertSame4() {
-		assertSame('2', 2);
+		// assertSame('2', 2);
+
+		/* -> Right data <- */
+		assertSame('2', '2');
 	}
 
 	@Test
 	public void ejemploAssertSame5() {
-		assertSame("2", 2);
+		// assertSame("2", 2);
+
+		/* -> Right data <- */
+		assertSame("2", "2");
 	}
 
 	@Test
@@ -191,7 +226,10 @@ class Tema2Sesion1ApplicationTest {
 
 	@Test
 	public void ejemploAssertNotSame1() {
-		assertNotSame("Hola","Hola");
+		// assertNotSame("Hola","Hola");
+
+		/* -> Right data <- */
+		assertNotSame("Hola","Hola!");
 	}
 
 	@Test
@@ -202,7 +240,11 @@ class Tema2Sesion1ApplicationTest {
 	@Test
 	public void ejemploAssertNotSame3() {
 		String nombre1="Hola";
-		String nombre2="Hola";
+		// String nombre2="Hola";
+
+		/* -> Right data <- */
+		String nombre2="Hola!";
+
 		assertNotSame(nombre1, nombre2);
 	}
 
@@ -216,7 +258,11 @@ class Tema2Sesion1ApplicationTest {
 	@Test
 	public void ejemploAssertArrayEquals2() {
 		String[] nombres1 = { "java", "junit", "jboss" };
-		String[] nombres2 = { "java", "junit", "jbosS" };
+		// String[] nombres2 = { "java", "junit", "jbosS" };
+
+		/* -> Right data <- */
+		String[] nombres2 = { "java", "junit", "jboss" };
+
 		assertArrayEquals(nombres1, nombres2);
 	}
 }
